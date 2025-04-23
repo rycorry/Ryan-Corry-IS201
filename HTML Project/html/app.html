@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Random NBA Player Generator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: lightgreen;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    h1 {
+      color: #333;
+    }
+
+    #player {
+      font-size: 24px;
+      font-weight: bold;
+      margin: 20px;
+      color: #0066cc;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: #0066cc;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #004c99;
+    }
+    .header {
+    text-align: center;
+    margin-bottom: 30px;
+    }
+
+    .subheader {
+    font-size: 16px;
+    line-height: 2;
+    }
+
+    .subheader a {
+    text-decoration: none;
+    color: #0066cc;
+    margin: 0 5px;
+    }
+
+    .subheader a:hover {
+    text-decoration: underline;
+    }
+
+  </style>
+</head>
+<body>
+
+    <div class="header">
+        <div class="subheader">
+        <img src="../images/nba-logo-transparent.png" height="200" alt="NBA Logo"> <br> <br>
+          <a href="resume.html">Ryan Corry Resume</a> |
+          <a href="scratch.html">Jayson Tatum Resume</a> |
+          <a href="#">NBA Player Generator</a>
+        </div>
+    </div>
+
+  <h1>Random NBA Player Generator</h1>
+  <div id="player">Click the button to generate a player!</div>
+  <button onclick="generatePlayer()">Generate Player</button>
+
+  <script>
+    const players = [
+      "LeBron James",
+      "Stephen Curry",
+      "Kevin Durant",
+      "Giannis Antetokounmpo",
+      "Jayson Tatum",
+      "Luka Dončić",
+      "Joel Embiid",
+      "Nikola Jokić",
+      "Ja Morant",
+      "Jimmy Butler",
+      "Damian Lillard",
+      "Kawhi Leonard",
+      "Anthony Davis",
+      "James Harden",
+      "Zion Williamson"
+    ];
+
+    function generatePlayer() {
+      const randomIndex = Math.floor(Math.random() * players.length);
+      const selectedPlayer = players[randomIndex];
+      document.getElementById("player").innerText = selectedPlayer;
+    }
+  </script>
+
+</body>
+</html>
